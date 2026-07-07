@@ -15,7 +15,7 @@ function Header() {
       <button className="header__add-clothes-button">+ Add clothes</button>
       <div className="header__user-container">
         <p className="header__username">Genevive Castro</p>
-        {/* Make alt value match current user */}
+        {/* TODO - Make alt value match current user */}
         <img
           className="header__avatar"
           src={headerAvatar}
