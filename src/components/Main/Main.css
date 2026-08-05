@@ -1,6 +1,6 @@
 .cards__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(325px, 325px));
+  grid-template-columns: repeat(auto-fit, minmax(323px, 323px));
   justify-content: center;
   list-style-type: none;
   gap: 20px;
