@@ -11,10 +11,14 @@ function Header() {
   return (
     <header className="header">
       <img className="header__logo" src={headerLogo} alt="WTWR logo" />
-      <p className="header__date-and-location">{currentDate}, New York</p>
-      <button className="header__add-clothes-button">+ Add clothes</button>
+      <p className="header__date-and-location header__text-styles">
+        {currentDate}, New York
+      </p>
+      <button className="header__add-clothes-button header__text-styles">
+        + Add clothes
+      </button>
       <div className="header__user-container">
-        <p className="header__username">Genevive Castro</p>
+        <p className="header__username header__text-styles">Genevive Castro</p>
         {/* TODO - Make alt value match current user */}
         <img
           className="header__avatar"

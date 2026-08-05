@@ -13,6 +13,7 @@ function Main({ weatherData, defaultClothingItems }) {
             // .filter((item) => {
             //   return item.weather === weatherData.type;
             // })
+
             .map((item) => {
               return <ItemCard key={item._id} item={item} />;
             })}

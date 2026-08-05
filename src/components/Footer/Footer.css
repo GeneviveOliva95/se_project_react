@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 171px 0 21px 0;
+}
+
+.footer__copyright {
+  margin: 0;
+}
+
+.footer__production-year {
+  margin: 0;
+}
