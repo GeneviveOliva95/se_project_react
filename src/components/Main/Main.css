@@ -1,6 +1,7 @@
 .cards__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(323px, 323px));
+  /* Modify these values to resolve the issue of the cards protruding past the gutters */
   justify-content: center;
   list-style-type: none;
   gap: 20px;

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../Header/Header.jsx";
 import Main from "../Main/Main.jsx";
+import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
 import Footer from "../Footer/Footer.jsx";
 import { defaultClothingItems } from "../../utils/constants.js";
 import "./App.css";
@@ -16,6 +17,7 @@ function App() {
         <Main weatherData={weatherData} defaultClothingItems={clothingItems} />
         <Footer />
       </div>
+      <ModalWithForm />
     </div>
   );
 }
