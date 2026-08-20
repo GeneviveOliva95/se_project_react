@@ -7,23 +7,23 @@ function ModalWithForm() {
         <p className="modal__title">New garment</p>
         {/* <button className="modal__exit-button" type="button"></button> */}
         {/* Modify exit button to contain icon*/}
-        <div className="modal__name-container">
-          <label htmlFor="name" className="modal__name-label">
+        <div className="modal__container">
+          <label htmlFor="name" className="modal__label">
             Name
           </label>
           <input
-            className="modal__name-input"
+            className="modal__input"
             type="text"
             id="name"
             placeholder="Name"
           />
         </div>
-        <div className="modal__image-container">
-          <label htmlFor="imageUrl" className="modal__image-label">
+        <div className="modal__container">
+          <label htmlFor="imageUrl" className="modal__label">
             Image
           </label>
           <input
-            className="modal__image-input"
+            className="modal__input"
             type="text"
             id="imageUrl"
             placeholder="Image URL"
