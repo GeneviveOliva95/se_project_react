@@ -6,7 +6,7 @@ function ModalWithForm({
   title,
   buttonText,
   activeModal,
-  closeActiveModal,
+  handleCloseModal,
 }) {
   return (
     <div className={`modal ${activeModal === "add-garment" && "modal_opened"}`}>
@@ -15,7 +15,7 @@ function ModalWithForm({
         <button
           className="modal__exit-button"
           type="button"
-          onClick={closeActiveModal}
+          onClick={handleCloseModal}
         >
           <img className="modal__exit-logo" src={exitLogo} alt="Exit logo" />
         </button>
