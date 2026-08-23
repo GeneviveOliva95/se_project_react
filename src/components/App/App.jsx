@@ -19,6 +19,12 @@ function App() {
     setActiveModal("");
   };
 
+  const handleModalOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      setActiveModal("");
+    }
+  };
+
   return (
     <div className="page">
       <div className="page__content">
@@ -31,6 +37,7 @@ function App() {
         buttonText="Add garment"
         activeModal={activeModal}
         handleCloseModal={handleCloseModal}
+        handleModalOverlayClick={handleModalOverlayClick}
       >
         <div className="modal__container">
           <label htmlFor="name" className="modal__label">
