@@ -11,7 +11,7 @@ function ModalWithForm({
 }) {
   return (
     <div
-      className={`modal ${activeModal === "add-garment" && "modal_opened"}`}
+      className={`modal ${activeModal === "add-garment" ? "modal_opened" : ""}`}
       onClick={handleModalOverlayClick}
     >
       <div className="modal__content">
