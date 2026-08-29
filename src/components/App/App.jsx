@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../Header/Header.jsx";
 import Main from "../Main/Main.jsx";
 import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
@@ -21,9 +21,22 @@ function App() {
 
   const handleModalOverlayClick = (e) => {
     if (e.target === e.currentTarget) {
-      setActiveModal("");
+      handleCloseModal();
     }
   };
+
+  useEffect(() => {
+    const onKeyDown = (e) => {
+      if (e.key === "Escape" && activeModal !== "") {
+        handleCloseModal();
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [activeModal]);
 
   return (
     <div className="page">
