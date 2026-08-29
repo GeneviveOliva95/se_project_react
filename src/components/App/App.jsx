@@ -49,8 +49,8 @@ function App() {
         title="New garment"
         buttonText="Add garment"
         activeModal={activeModal}
-        handleCloseModal={handleCloseModal}
-        handleModalOverlayClick={handleModalOverlayClick}
+        onClose={handleCloseModal}
+        onModalOverlayClick={handleModalOverlayClick}
       >
         <div className="modal__container">
           <label htmlFor="name" className="modal__label">

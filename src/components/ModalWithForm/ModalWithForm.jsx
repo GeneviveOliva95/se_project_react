@@ -6,22 +6,18 @@ function ModalWithForm({
   title,
   buttonText,
   activeModal,
-  handleCloseModal,
-  handleModalOverlayClick,
+  onClose,
+  onModalOverlayClick,
 }) {
   return (
     <div
       className={`modal ${activeModal === "add-garment" ? "modal_opened" : ""}`}
-      onClick={handleModalOverlayClick}
+      onClick={onModalOverlayClick}
     >
       {/* Replace the hardcoded modal name (add-garment) in the modal element above */}
       <div className="modal__content">
         <h2 className="modal__title">{title}</h2>
-        <button
-          className="modal__exit-button"
-          type="button"
-          onClick={handleCloseModal}
-        >
+        <button className="modal__exit-button" type="button" onClick={onClose}>
           <img className="modal__exit-logo" src={exitLogo} alt="Exit logo" />
         </button>
         <form className="modal__form">
