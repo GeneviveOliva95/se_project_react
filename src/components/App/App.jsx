@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="page">
       <div className="page__content">
-        <Header handleAddClick={handleAddClick} />
+        <Header onAddClick={handleAddClick} />
         <Main weatherData={weatherData} defaultClothingItems={clothingItems} />
         <Footer />
       </div>
