@@ -9,14 +9,14 @@ import "./App.css";
 function App() {
   const [weatherData, setWeatherData] = useState({ type: "cold" });
   const [clothingItems, setClothingItems] = useState(defaultClothingItems);
-  const [isOpen, setIsOpen] = useState(false);
+  const [activeModal, setActiveModal] = useState("");
 
   const handleAddClick = () => {
-    setIsOpen(true);
+    setActiveModal("add-garment");
   };
 
   const handleCloseModal = () => {
-    setIsOpen(false);
+    setActiveModal("");
   };
 
   const handleModalOverlayClick = (e) => {
@@ -27,7 +27,7 @@ function App() {
 
   useEffect(() => {
     const onKeyDown = (e) => {
-      if (e.key === "Escape" && isOpen === true) {
+      if (e.key === "Escape" && activeModal) {
         handleCloseModal();
       }
     };
@@ -36,7 +36,7 @@ function App() {
     return () => {
       document.removeEventListener("keydown", onKeyDown);
     };
-  }, [isOpen]);
+  }, [activeModal]);
 
   return (
     <div className="page">
@@ -48,7 +48,7 @@ function App() {
       <ModalWithForm
         title="New garment"
         buttonText="Add garment"
-        isOpen={isOpen}
+        isOpen={activeModal === "add-garment"}
         onClose={handleCloseModal}
         onModalOverlayClick={handleModalOverlayClick}
       >
