@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Header from "../Header/Header.jsx";
 import Main from "../Main/Main.jsx";
 import ModalWithForm from "../ModalWithForm/ModalWithForm.jsx";
+import ItemModal from "../ItemModal/ItemModal.jsx";
 import Footer from "../Footer/Footer.jsx";
 import { defaultClothingItems } from "../../utils/constants.js";
 import "./App.css";
@@ -10,6 +11,12 @@ function App() {
   const [weatherData, setWeatherData] = useState({ type: "cold" });
   const [clothingItems, setClothingItems] = useState(defaultClothingItems);
   const [activeModal, setActiveModal] = useState("");
+  const [selectedCard, setSelectedCard] = useState({});
+
+  const handleCardClick = (card) => {
+    setActiveModal("preview-card-image");
+    setSelectedCard(card);
+  };
 
   const handleAddClick = () => {
     setActiveModal("add-garment");
@@ -42,7 +49,11 @@ function App() {
     <div className="page">
       <div className="page__content">
         <Header onAddClick={handleAddClick} />
-        <Main weatherData={weatherData} defaultClothingItems={clothingItems} />
+        <Main
+          weatherData={weatherData}
+          defaultClothingItems={clothingItems}
+          handleCardClick={handleCardClick}
+        />
         <Footer />
       </div>
       <ModalWithForm
@@ -96,6 +107,12 @@ function App() {
           </label>
         </fieldset>
       </ModalWithForm>
+      <ItemModal
+        isOpen={activeModal === "preview-card-image"}
+        card={selectedCard}
+        onClose={handleCloseModal}
+        onModalOverlayClick={handleModalOverlayClick}
+      />
     </div>
   );
 }
