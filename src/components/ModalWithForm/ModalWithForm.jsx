@@ -1,5 +1,5 @@
 import "./ModalWithForm.css";
-import exitLogo from "../../assets/exit.svg";
+import exitLogoGray from "../../assets/exit-gray.svg";
 
 function ModalWithForm({
   name,
@@ -18,7 +18,11 @@ function ModalWithForm({
       <div className="modal__content">
         <h2 className="modal__title">{title}</h2>
         <button className="modal__exit-button" type="button" onClick={onClose}>
-          <img className="modal__exit-logo" src={exitLogo} alt="Exit logo" />
+          <img
+            className="modal__exit-logo"
+            src={exitLogoGray}
+            alt="Exit logo"
+          />
         </button>
         <form className="modal__form" name={name}>
           {children}

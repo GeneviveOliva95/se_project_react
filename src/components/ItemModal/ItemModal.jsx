@@ -1,5 +1,5 @@
 import "./ItemModal.css";
-import exitLogo from "../../assets/exit.svg";
+import exitLogoWhite from "../../assets/exit-white.svg";
 
 function ItemModal({ name, isOpen, onClose, onModalOverlayClick, card }) {
   return (
@@ -9,7 +9,11 @@ function ItemModal({ name, isOpen, onClose, onModalOverlayClick, card }) {
     >
       <div className="modal__content modal__content_type_image">
         <button className="modal__exit-button" type="button" onClick={onClose}>
-          <img className="modal__exit-logo" src={exitLogo} alt="Exit logo" />
+          <img
+            className="modal__exit-logo"
+            src={exitLogoWhite}
+            alt="Exit logo"
+          />
         </button>
         <img className="modal__image" src={card.link} alt={card.name} />
         <div className="modal__footer">
