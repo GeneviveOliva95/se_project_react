@@ -23,7 +23,7 @@ function Header({ onAddClick, weatherData }) {
       </button>
       <div className="header__user-container">
         <p className="header__username header__text-styles">Genevive Castro</p>
-        {/* TODO - Make alt value match current user */}
+        {/* TODO - Make alt value match current user in future iteration */}
         <img
           className="header__avatar"
           src={headerAvatar}

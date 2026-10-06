@@ -16,6 +16,7 @@ function App() {
     city: "",
   });
   const [clothingItems, setClothingItems] = useState(defaultClothingItems);
+  // TODO - setClothingItems will be utilized to add clothing items in future iteration
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
 
