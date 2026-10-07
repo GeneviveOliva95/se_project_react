@@ -109,19 +109,40 @@ function App() {
             Select the weather type&#58;
           </legend>
           <label htmlFor="hot" className="modal__label modal__label_type_radio">
-            <input className="modal__radio-input" type="radio" id="hot" /> Hot
+            <input
+              className="modal__radio-input"
+              type="radio"
+              name="weather"
+              value="hot"
+              id="hot"
+            />{" "}
+            Hot
           </label>
           <label
             htmlFor="warm"
             className="modal__label modal__label_type_radio"
           >
-            <input className="modal__radio-input" type="radio" id="warm" /> Warm
+            <input
+              className="modal__radio-input"
+              type="radio"
+              name="weather"
+              value="warm"
+              id="warm"
+            />{" "}
+            Warm
           </label>
           <label
             htmlFor="cold"
             className="modal__label modal__label_type_radio"
           >
-            <input className="modal__radio-input" type="radio" id="cold" /> Cold
+            <input
+              className="modal__radio-input"
+              type="radio"
+              name="weather"
+              value="cold"
+              id="cold"
+            />{" "}
+            Cold
           </label>
         </fieldset>
       </ModalWithForm>
