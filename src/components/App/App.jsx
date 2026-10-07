@@ -89,6 +89,7 @@ function App() {
             type="text"
             id="name"
             placeholder="Name"
+            required
           />
         </div>
         <div className="modal__container">
@@ -100,6 +101,7 @@ function App() {
             type="text"
             id="imageUrl"
             placeholder="Image URL"
+            required
           />
         </div>
         <fieldset className="modal__radio-buttons">
