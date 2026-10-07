@@ -94,11 +94,11 @@ function App() {
         </div>
         <div className="modal__container">
           <label htmlFor="imageUrl" className="modal__label">
-            Image
+            Image URL
           </label>
           <input
             className="modal__input"
-            type="text"
+            type="url"
             id="imageUrl"
             placeholder="Image URL"
             required
